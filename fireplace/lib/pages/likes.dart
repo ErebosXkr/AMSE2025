@@ -2,8 +2,8 @@ import 'package:fireplace/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class LikePage extends StatelessWidget {
+  const LikePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
 
         ],
       ),
-      bottomNavigationBar: getBottomNavBar(0, context),
+      bottomNavigationBar: getBottomNavBar(1, context),
     );
 
   }
