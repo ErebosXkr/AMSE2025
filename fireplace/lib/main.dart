@@ -16,31 +16,33 @@ const bottomNavBarElements = <BottomNavigationBarItem>[
 BottomNavigationBar getBottomNavBar(int index, BuildContext context) {
   return BottomNavigationBar(
         currentIndex: index,
-        backgroundColor: Color.fromARGB(255, 24, 26, 24),
+        backgroundColor: Color.fromARGB(255, 17, 19, 17),
         showUnselectedLabels: true,
         selectedItemColor: Color.fromARGB(255, 40, 170, 0),
         unselectedItemColor: Colors.white,
         items: bottomNavBarElements,
         type: BottomNavigationBarType.fixed,
         onTap: (nIndex) => {
-          if (nIndex == 0) Navigator.pushReplacement(context,
-          PageRouteBuilder(
+          if (nIndex == 0) Navigator.pushAndRemoveUntil(context,PageRouteBuilder(
             pageBuilder: (context, anim1, anim2) => HomePage(),
             transitionDuration: Duration.zero,
             reverseTransitionDuration: Duration.zero,
-          ))
-          else if (nIndex == 1) Navigator.pushReplacement(context,
+          ),
+          (Route<dynamic> route) => !Navigator.canPop(context))
+          else if (nIndex == 1) Navigator.pushAndRemoveUntil(context,
           PageRouteBuilder(
             pageBuilder: (context, anim1, anim2) => LikePage(),
             transitionDuration: Duration.zero,
             reverseTransitionDuration: Duration.zero,
-          ))
-          else if (nIndex == 2) Navigator.pushReplacement(context,
+          ),
+          (Route<dynamic> route) => !Navigator.canPop(context))
+          else if (nIndex == 2) Navigator.pushAndRemoveUntil(context,
           PageRouteBuilder(
             pageBuilder: (context, anim1, anim2) => AboutPage(),
             transitionDuration: Duration.zero,
             reverseTransitionDuration: Duration.zero,
-          ))
+          ), 
+          (Route<dynamic> route) => !Navigator.canPop(context))
         },
         );
 }

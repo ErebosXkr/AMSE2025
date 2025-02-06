@@ -9,9 +9,10 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 24, 26, 24),
+      backgroundColor: Color.fromARGB(255, 17, 19, 17),
       body: Column(
         children: [
+          SizedBox(height: 30),
           // Title
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,10 +29,8 @@ class AboutPage extends StatelessWidget {
                   Text("Place",style: GoogleFonts.nunito(color: Colors.white, fontSize: 50)),
                 ]
               ),),
-          ],)
-
-
-
+          ],),
+          SizedBox(height: 30),
         ],
       ),
       bottomNavigationBar: getBottomNavBar(2, context),
