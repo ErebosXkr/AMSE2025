@@ -2,6 +2,7 @@
 import 'package:fireplace/data-classes/mangaItem.dart';
 import 'package:fireplace/widgets/mangaItemWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
@@ -29,8 +30,7 @@ class _ItemListState extends State<Itemlist> {
     var nelt = <MangaItem>[];
     int i = 0;
     for (String key in map.keys) {
-      if (i > 5) break;
-      nelt.add(MangaItem(key, map[key]["title"], map[key]["desc"], map[key]["status"], map[key]["cover_id"]));
+      nelt.add(MangaItem(key, map[key]["title"], map[key]["status"], map[key]["cover_id"], desc: map[key]["desc"]));
       i++;
     }
     return nelt;
@@ -56,10 +56,8 @@ class _ItemListState extends State<Itemlist> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return  ListView(
         children: getItemWidgets(),
-      ),
     );
   }
   

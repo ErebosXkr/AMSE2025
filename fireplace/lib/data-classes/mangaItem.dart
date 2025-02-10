@@ -1,11 +1,14 @@
 class MangaItem {
 
   final String title;
-  final String desc;
+  String? desc;
   final String id;
   final String coverId;
   final String status;
 
-  const MangaItem(this.id, this.title, this.desc, this.status, this.coverId);
+  MangaItem(this.id, this.title, this.status, this.coverId, {desc}) {
+    this.desc = desc.replaceAll("\n", " ");
+    this.desc = (this.desc ?? "no desc").replaceAll("\r", "");
+  }
 
 }

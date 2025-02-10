@@ -34,9 +34,9 @@ class MangaItemWidget extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(manga.title, style: GoogleFonts.nunito(color: Colors.white, fontSize: 15)),
+                    Text(manga.title, style: GoogleFonts.nunito(color: Colors.white, fontSize: 15), overflow: TextOverflow.ellipsis,),
                     SizedBox(height: 2),
-                    Text(manga.desc, style: GoogleFonts.nunito(color: const Color.fromARGB(255, 107, 107, 107), fontSize: 11))
+                    Text(manga.desc ?? "no description", style: GoogleFonts.nunito(color: const Color.fromARGB(255, 107, 107, 107), fontSize: 11), overflow: TextOverflow.ellipsis,)
                   ]
                 )
               )
