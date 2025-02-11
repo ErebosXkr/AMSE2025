@@ -2,7 +2,6 @@
 import 'package:fireplace/data-classes/mangaItem.dart';
 import 'package:fireplace/widgets/mangaItemWidget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
