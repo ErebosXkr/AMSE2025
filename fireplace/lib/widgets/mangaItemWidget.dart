@@ -1,4 +1,6 @@
+import 'package:fireplace/data-classes/elements.dart';
 import 'package:fireplace/data-classes/mangaItem.dart';
+import 'package:fireplace/widgets/imageButton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,11 +26,11 @@ class MangaItemWidget extends StatelessWidget {
             Padding(padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
             child: Image.asset(
               "images/${manga.id}-${manga.coverId}.jpg",
-              height: 80,
+              width: 40,
               )),
 
             Container(
-              width: MediaQuery.sizeOf(context).width-120,
+              width: MediaQuery.sizeOf(context).width-150,
               child: Padding(
                 padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
                 child: Column(
@@ -40,7 +42,8 @@ class MangaItemWidget extends StatelessWidget {
                   ]
                 )
               )
-            )
+            ),
+            Imagebutton(Elements.elements.indexOf(manga))
           ],
 
 
