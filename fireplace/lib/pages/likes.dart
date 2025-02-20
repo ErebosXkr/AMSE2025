@@ -1,4 +1,5 @@
 import 'package:fireplace/main.dart';
+import 'package:fireplace/widgets/likedItemList.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,6 +32,8 @@ class LikePage extends StatelessWidget {
               ),),
           ],),
           SizedBox(height: 30),
+          SizedBox(height: MediaQuery.of(context).size.height - 200,
+          child: LikedItemList()),
         ],
       ),
       bottomNavigationBar: getBottomNavBar(1, context),

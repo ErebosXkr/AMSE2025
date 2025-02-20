@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class Imagebutton extends StatefulWidget {
 
   final int id;
+  final Function onPress;
 
-  const Imagebutton(this.id, {super.key});
+  const Imagebutton(this.id, this.onPress, {super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -17,11 +18,13 @@ class ImagebuttonState extends State<Imagebutton> {
 
   int id = 0;
   bool liked = false;
+  Function onPress = () {}; 
 
   @override
   void initState() {
     super.initState();
     id = widget.id;
+    onPress = widget.onPress;
     liked = (Elements.likedElements.contains(id));
   }
 
@@ -39,6 +42,7 @@ class ImagebuttonState extends State<Imagebutton> {
           Elements.likedElements.remove(id);
         }
       });
+      onPress();
     }, child: Image.asset(liked ? "images/icon_checked.png" : "images/icon_not_checked.png", width: 20,));
   }
   

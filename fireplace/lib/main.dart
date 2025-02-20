@@ -1,12 +1,11 @@
 import 'package:fireplace/pages/about.dart';
 import 'package:fireplace/pages/home.dart';
 import 'package:fireplace/pages/likes.dart';
-import 'package:fireplace/data-classes/elements.dart';
+import 'package:fireplace/pages/load.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  Elements.setupElements();
   runApp(MyApp());
 }
 
@@ -62,7 +61,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 191, 51)),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const LoadingPage(),
       debugShowCheckedModeBanner: false,
     );
   }

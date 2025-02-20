@@ -8,11 +8,13 @@ class MangaItemWidget extends StatelessWidget {
 
   final MangaItem manga;
   final bool liked;
+  final Function onPress;
 
-  const MangaItemWidget(this.manga, this.liked, {super.key});
+  const MangaItemWidget(this.manga, this.liked, this.onPress, {super.key});
 
   @override
   Widget build(BuildContext context) {
+    int id = Elements.elements.indexOf(manga);
     return Padding(
       padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
       child: Container(
@@ -43,7 +45,7 @@ class MangaItemWidget extends StatelessWidget {
                 )
               )
             ),
-            Imagebutton(Elements.elements.indexOf(manga))
+            Imagebutton(id, onPress, key: Key("$id"),),
           ],
 
 
