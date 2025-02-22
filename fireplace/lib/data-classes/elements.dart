@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:fireplace/data-classes/mangaItem.dart';
 import 'package:fireplace/pages/home.dart';
@@ -13,7 +12,7 @@ class Elements {
   static var likedElements = <int>[];
 
   static void setupElements(context){
-    readData("assets/manga-data/data.json").then((map) async {
+    readData("manga_data/data.json").then((map) async {
       elements = fromMap(map);
       await Future.delayed(Duration(seconds: 1));
       Navigator.pushAndRemoveUntil(context,PageRouteBuilder(
