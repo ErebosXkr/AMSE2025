@@ -2,8 +2,10 @@
 
 ## Lancer l'appli
 
-`cd ./fireplace` <br/>
-`flutter run`
+```bash
+cd ./fireplace
+flutter run
+```
 
 Fireplace est une application de gestion de mangas.
 Il est possible de liker des éléments et de les isoler.
