@@ -2,7 +2,7 @@
 
 ## Lancer l'appli
 
-`cd ./fireplace`
+`cd ./fireplace` <br/>
 `flutter run`
 
 Fireplace est une application de gestion de mangas.
