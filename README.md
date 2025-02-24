@@ -1,14 +1,14 @@
 # AMSE2025
 
-Pour lancer l'appli:
+## Lancer l'appli
 
-$ cd ./fireplace
-$ flutter run
+`cd ./fireplace`
+`flutter run`
 
 Fireplace est une application de gestion de mangas.
 Il est possible de liker des éléments et de les isoler.
 
-# Idées d'améliorations
+## Idées d'améliorations
 
 - ajout d'une pop-up pour voir la description et le status des mangas.
 - ajout d'un système pour sauvegarder les données d'un lancement à l'autre.
