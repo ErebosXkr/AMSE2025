@@ -31,6 +31,9 @@ class AboutPage extends StatelessWidget {
               ),),
           ],),
           SizedBox(height: 30),
+          Text("auteur: Paul Juran", style: GoogleFonts.nunito(color: Color.fromARGB(255, 127, 127, 127)),),
+          Text("github: https://github.com/ErebosXkr", style: GoogleFonts.nunito(color: Color.fromARGB(255, 127, 127, 127)),),
+          
         ],
       ),
       bottomNavigationBar: getBottomNavBar(2, context),
